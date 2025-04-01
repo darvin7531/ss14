@@ -1,0 +1,50 @@
+#### CAR ENTITY ####
+- type: entity
+  name: ТаксоБот
+  parent: BaseBorgChassisNT
+  id: MobTaxiBot
+  description: Лучший водитель всея сектора, а может и всего НТ!
+  components:
+  - type: Strap
+    position: Stand
+    buckleOffset: "0,-0.05"
+  - type: BorgChassis
+    maxModules: 1
+    moduleWhitelist:
+      tags:
+    hasMindState: taxi
+    noMindState: taxi
+  - type: BorgTransponder
+    sprite:
+      sprite: _darvin/Entity/Mobs/Cyborgs/taxi.rsi
+      state: taxi
+      drawdepth: Doors
+    name: cyborg
+  - type: Construction
+    node: cyborg
+  - type: Speech
+    speechVerb: Robotic
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 4.0
+    baseSprintSpeed: 8.0
+  - type: InteractionPopup
+    interactSuccessString: petting-success-generic-cyborg
+    interactFailureString: petting-failure-generic-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: Sprite
+    sprite: _darvin/Entity/Mobs/Cyborgs/taxi.rsi
+    drawdepth: Doors
+    layers:
+      - state: taxi
+      - state: taxi
+        map: ["enum.BorgVisualLayers.Light"]
+        shader: shaded
+        visible: false
+      - state: taxi
+        shader: shaded
+        map: ["light"]
+        visible: false
+  - type: InnateItem
+    instantActions:
+    - HandheldStationMapUnpowered

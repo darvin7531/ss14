@@ -1,0 +1,9 @@
+- type: cargoProduct
+  id: FunTaxiBot
+  icon:
+    sprite: _darvin/Entity/Mobs/Cyborgs/taxi.rsi
+    state: taxi
+  product: MobTaxiBot
+  cost: 4000
+  category: cargoproduct-category-name-fun
+  group: market
