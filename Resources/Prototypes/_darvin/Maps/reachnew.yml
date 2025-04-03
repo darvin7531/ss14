@@ -1,7 +1,7 @@
 - type: gameMap
-  id: Reach
-  mapName: 'Reach'
-  mapPath: /Maps/reach.yml
+  id: DarvinReach
+  mapName: 'Reach New'
+  mapPath: /Maps/_darvin/Station/Reach.yml
   minPlayers: 0
   maxPlayers: 20
   stations:
@@ -9,12 +9,12 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Reach Transport {1}'
+          mapNameTemplate: '{0} Предел {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: 'SC'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/_Sunrise/Shuttles/emergency_lox.yml
+          emergencyShuttlePath: /Maps/_Sunrise/Shuttles/emergency.yml
         - type: StationJobs
           availableJobs:
             SalvageSpecialist: [ 1, 1 ]
@@ -41,4 +41,25 @@
             SeniorOfficer: [ 1, 1 ]
             Adjutant: [ 1, 1 ]
             Lawyer: [ 1, 1 ]
-
+            Clown: [ 1, 1 ]
+            Mime: [ 1, 1 ]
+        - type: StationGoal
+          goals:
+          - Shuttle
+          - SolarPanels
+          - Artifacts
+          - Delegates
+          - Cyborgs
+          - Testing
+          - Anomaly
+          - Replenishment
+          - IntelWeapons
+          - Reports
+          - Reconnaissance
+          - Saboteurs
+          - Furs
+          - Crew
+          - CleaningUp
+          - HumanitarianAid
+          - PersonnelRecovery
+          #- VirusFlesh

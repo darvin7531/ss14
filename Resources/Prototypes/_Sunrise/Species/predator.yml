@@ -9,7 +9,6 @@
   markingLimits: MobPredatorMarkingLimits
   dollPrototype: MobPredatorDummy
   skinColoration: None
-  sponsorOnly: true
 
 - type: bodyType
   id: PredatorNormal
