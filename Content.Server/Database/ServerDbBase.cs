@@ -1746,7 +1746,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
-
+        // Sunrise-Start
         # region Ahelp
 
         public async Task AddAHelpMessage(Guid senderUserId, Guid receiverUserId, string message, DateTimeOffset sentAt, bool playSound, bool adminOnly)
@@ -1765,17 +1765,6 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             await db.DbContext.SaveChangesAsync();
         }
 
-        public async Task<List<AHelpMessage>> GetAHelpMessagesByReceiverListAsync(List<Guid> receiverUserIds)
-        {
-            await using var db = await GetDb();
-
-            var messages = await db.DbContext.AHelpMessages
-                .Where(m => receiverUserIds.Contains(m.ReceiverUserId))
-                .ToListAsync();
-
-            return messages;
-        }
-
         public async Task<List<AHelpMessage>> GetAHelpMessagesByReceiverAsync(Guid receiverUserId)
         {
             await using var db = await GetDb();
@@ -1788,6 +1777,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         }
 
         # endregion
+        // Sunrise-End
 
         # region IPIntel
 

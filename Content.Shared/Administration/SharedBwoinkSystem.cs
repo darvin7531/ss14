@@ -25,14 +25,15 @@ namespace Content.Shared.Administration
         {
         }
 
+        // Sunrise-Start
         [Serializable, NetSerializable]
         public sealed class BwoinkRequestDbMessages : EntityEventArgs
         {
-            public bool Admin { get; }
+            public NetUserId UserId { get; }
 
-            public BwoinkRequestDbMessages(bool admin)
+            public BwoinkRequestDbMessages(NetUserId userId)
             {
-                Admin = admin;
+                UserId = userId;
             }
         }
 
@@ -46,6 +47,7 @@ namespace Content.Shared.Administration
                 UserId = userId;
             }
         }
+        // Sunrise-End
 
         [Serializable, NetSerializable]
         public sealed class BwoinkTextMessage : EntityEventArgs

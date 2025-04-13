@@ -362,15 +362,15 @@ namespace Content.Server.Database
 
         #endregion
 
+        // Sunrise-Start
         #region Ahelp
 
         Task AddAHelpMessage(Guid senderSessionUserId, Guid messageUserId, string message, DateTimeOffset sentAt, bool playSound, bool adminOnly);
 
-        public Task<List<AHelpMessage>> GetAHelpMessagesByReceiverListAsync(List<Guid> receiverUserIds);
-
         public Task<List<AHelpMessage>> GetAHelpMessagesByReceiverAsync(Guid receiverUserId);
 
         #endregion
+        // Sunrise-End
     }
 
     /// <summary>
@@ -1056,12 +1056,6 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.AddAHelpMessage(senderUserId, receiverUserId, message, sentAt, playSound, adminOnly));
-        }
-
-        public Task<List<AHelpMessage>> GetAHelpMessagesByReceiverListAsync(List<Guid> receiverUserIds)
-        {
-            DbWriteOpsMetric.Inc();
-            return RunDbCommand(() => _db.GetAHelpMessagesByReceiverListAsync(receiverUserIds));
         }
 
         public Task<List<AHelpMessage>> GetAHelpMessagesByReceiverAsync(Guid receiverUserId)

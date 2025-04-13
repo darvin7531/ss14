@@ -2,13 +2,30 @@
   id: SunriseMapPool
   maps:
   - SunriseDelta
-  - SunriseBox
   - SunriseFland
   - SunriseMarathon
   - SunriseBagel
   - SunriseMeta
   - SunrisePlasma
-  - DarvinReach
   - SunrisePacked
   - SunriseOasis
   - SunriseConvex
+  - SunriseLoop
+  - SunriseBox
+  - SunriseReach
+  # Неиграбельно
+  #- SunriseCorvaxGelta
+  #- SunriseRelic
+  # SUNRISE-TODO: Старые-новые карты
+  #- Glacier
+  #- Shoukou
+  #- Hammurabi
+  #- Lighthouse
+  #- Angle
+  #- Pebble
+  #- Ovni
+  #- Kettle
+  #- Tortuga
+  #- Arena
+
+# НЕ ДОБАВЛЯТЬ НОВЫЕ КАРТЫ БЕЗ МОЕГО РЕВЬЮ! ~ SplikZerys
